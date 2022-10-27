@@ -6,6 +6,7 @@ The bugs are most likely closely related and occur due to the same reason.
 The right two cubes are hierachically ordered as follows:
 - Parent Cube (No NetworkObject)
   - Child Cube (NetworkObject)
+
 and stacked on each other somewhere in the scene. 
 On Start(), the Parent Cube is moved from its original position to the desired one (0, 0.5, 0), 
 such that the stack appeares right in front of the respective players. 
@@ -17,4 +18,5 @@ The left two cubes are hierachically ordered as follows:
 - Parent Cube (No NetworkObject)
   - Scale Gameobject 
     - Scaled Child Cube (NetworkObject)
-This leads to a wrongly scaled Child Cube on the Client. 
+ 
+This leads to a wrongly scaled Child Cube on the Client in 1.1.0. 
