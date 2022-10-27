@@ -1,6 +1,13 @@
 This minimal sample demonstrates two bugs/breaking changes when upgrading from Netcode for Gameobjects 1.0.2 to 1.1.0:
 The bugs are most likely closely related and occur due to the same reason.
 
+To reproduce the bugs, start the sample and create a clone with ParrelSync or clone the repo twice. 
+Start the two instances and load the Bootstrap scene in the Netcode Samples folder for both. 
+Start and host on one instance, then start the client on the other. 
+In Netcode 1.0.2 there are now 4 Cubes forming a wall.
+In Netcode 1.1.0 there are the 4 Cubes on the Host, but the Client side breaks.
+A restart between switching Netcode versions is required.
+
 1. Initial position sync for in-scene places network objects:
 
 The right two cubes are hierachically ordered as follows:
